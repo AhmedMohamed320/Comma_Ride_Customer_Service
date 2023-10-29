@@ -1,0 +1,135 @@
+.head {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.head input {
+    background-color: var(--color-dark-4);
+    outline: none;
+    border: none;
+    color: var(--color-light-2);
+    padding: 0.5rem 3rem;
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.filter select {
+    background-color: var(--color-dark-4);
+    padding: 0.5rem 1rem;
+    font-size: 1.4rem;
+    color: var(--color-light-2);
+    border-radius: 0.5rem;
+}
+
+.filter {
+    margin: 1rem 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+/* -------------------- */
+.pop,.pop2 {
+    position: fixed;
+    background-color: #2e2323c2;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    right: 0;
+    align-items: center;
+    justify-content: center;
+    z-index: 10002;
+    display: none;
+}
+
+.pop.show ,.pop2.show{
+    display: flex;
+}
+
+.pop>div,.pop2>div {
+    background-color: var(--color-light-2);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    font-size: 2rem;
+    position: relative;
+    width: 90%;
+    max-width: 55rem;
+}
+
+.pop2>div{
+    max-width: 40rem;
+}
+
+.pop2>div .form{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border: 1px solid var(--color-light-3);
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.pop2>div .form >div{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.pop2>div .form >div input,.pop2>div .form >div textarea{
+    background-color: var(--color-dark-5);
+    outline: none;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    color: var(--color-light-2);
+}
+
+.pop>div .close,.pop2>div .close {
+    padding: 0.5rem;
+    font-size: 2.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pop>div button,.pop2>div button {
+    width: 100%;
+    background-color: var(--color-red-1);
+    padding: 0.5rem;
+    color: var(--color-light-2);
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shadow-1);
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+/* ---------------- */
+
+.orders {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+
+/* ---------------- */
+
+@media (max-width: 45rem) {
+    .orders {
+        grid-template-columns: 1fr;
+    }
+
+    .filter {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 35rem) {
+    .input {
+        display: none;
+    }
+}

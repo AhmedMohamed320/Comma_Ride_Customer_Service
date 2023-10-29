@@ -1,0 +1,44 @@
+.timeLine {
+    padding: 2rem 0;
+    background-color: var(--color-dark-1);
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shadow-1);
+    margin-top: 1rem;
+    position: relative;
+}
+
+.timeLine::after,
+.timeLine::before {
+    position: absolute;
+    content: "";
+    width: 10rem;
+    height: 100%;
+    top: 0;
+    z-index: 10;
+    background: #29272b;
+}
+
+.timeLine::after {
+    left: 0;
+    background: -webkit-linear-gradient(90deg,
+            #29272b 0%,
+            rgba(0, 0, 0, 0) 100%);
+    background: linear-gradient(90deg, #29272b 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.timeLine::before {
+    right: 0;
+    background: -webkit-linear-gradient(275deg,
+            #29272b 0%,
+            rgba(0, 0, 0, 0) 100%);
+    background: linear-gradient(275deg, #29272b 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+/* ------------------- */
+
+.map {
+    margin-top: 1rem;
+    border: 1px solid var(--color-dark-7);
+    box-shadow: var(--box-shadow-1);
+    border-radius: 0.5rem;
+}

@@ -1,0 +1,49 @@
+.section {
+    height: 10vh;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    background-color: var(--color-dark-4);
+    box-shadow: var(--box-shadow-1);
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.section>div:nth-of-type(1) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo img {
+    height: 65%;
+}
+
+.list>ul li>a {
+    color: var(--color-light-1);
+    padding: 0.5rem 0;
+    border-bottom: 2px solid transparent;
+    transition: 0.1s;
+}
+
+.list>ul li>a:hover {
+    border-bottom: 1px solid var(--color-red-1);
+}
+
+
+.btn a:nth-of-type(2) {
+    background-color: var(--color-red-1);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    color: var(--color-light-2);
+    box-shadow: var(--box-shadow-1);
+}
+
+/* ---------------- */

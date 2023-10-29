@@ -1,0 +1,184 @@
+.order {
+    background-color: var(--color-dark-4);
+    border-radius: 1rem;
+    box-shadow: var(--box-shadow-1);
+    color: var(--color-light-2);
+    font-size: 1.6rem;
+    overflow: hidden;
+}
+
+.order>div {
+    display: flex;
+}
+
+.order .head {
+    background-color: var(--color-dark-1);
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    font-size: 1.7rem;
+}
+
+.order .head .rate {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.order .head .rate ul li img {
+    width: 1.5rem;
+}
+
+.order .head .rate button {
+    font-size: 1.5rem;
+    font-weight: 500;
+    background-color: #1db46f;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+}
+
+.head .pending,
+.head .complete {
+    background-color: #1db46f;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+}
+
+.head .complete {
+    background-color: var(--color-red-1);
+}
+
+.head .pending p,
+.head .complete p {
+    font-weight: 500 !important;
+    font-size: 1.5rem;
+}
+
+.order>div p {
+    font-weight: 700;
+}
+
+.order>div p span {
+    font-weight: 400;
+    font-size: 1.6rem;
+}
+
+.order>.info {
+    padding: 2rem;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.order>.info>div {
+    display: flex;
+    font-size: 1.6rem;
+}
+
+.address,
+.data,
+.moreInfo,
+.Notes {
+    position: relative;
+    border: 1px solid var(--color-dark-6);
+    padding: 2rem 1.5rem;
+    border-radius: 1rem;
+    flex-direction: column;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.data>div {
+    display: flex;
+    gap: 3rem;
+}
+
+.moreInfo {
+    flex-direction: row;
+    gap: 3rem;
+}
+
+.address::after,
+.data::after,
+.Notes::after,
+.moreInfo::after {
+    content: "العناوين";
+    position: absolute;
+    background-color: var(--color-dark-4);
+    top: -2.5rem;
+    right: 2rem;
+    transform: translateY(50%);
+    padding: 0 1rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.moreInfo::after {
+    content: "معلومات الطلب";
+}
+
+.data::after {
+    content: "بيانات الطرفين";
+}
+
+.Notes::after {
+    content: "ملاحظات";
+}
+
+.stateOrder,
+.stateOrderTime {
+    display: grid !important;
+    grid-template-columns: repeat(5, 1fr);
+    background-color: var(--color-dark-1);
+    padding: 1rem;
+    text-align: center;
+    gap: 1rem;
+}
+
+.stateOrder>div {
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stateOrder>div p {
+    font-weight: 600;
+}
+
+.stateOrder>div.completed {
+    background-color: var(--color-red-1);
+    pointer-events: none;
+}
+
+.stateOrder>div.pending {
+    background-color: #1db46f;
+}
+
+.address>div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.address>div .image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 0.4rem;
+    background-color: var(--color-dark-6);
+}
+
+.address>div img {
+    width: 2.6rem;
+}
+
+@media (max-width: 30rem) {
+    .data>div {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}

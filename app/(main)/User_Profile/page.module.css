@@ -1,0 +1,31 @@
+
+.tasks table {
+    width: 100%;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    background-color: var(--color-dark-4);
+    box-shadow: var(--box-shadow-1);
+}
+.tasks table tr {
+    display: grid;
+    grid-template-columns: 1fr 4fr repeat(2, 1fr);
+    padding: 1rem;
+    font-size: 1.5rem;
+    color: var(--color-light-2);
+}
+
+.tasks table:nth-of-type(2) tr {
+    grid-template-columns:  repeat(4, 1fr);
+
+}
+.tasks .head {
+    background-color: var(--color-dark-1);
+    font-weight: 600;
+}
+
+.tasks tr td {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}

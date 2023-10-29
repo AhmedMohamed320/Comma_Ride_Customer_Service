@@ -1,0 +1,90 @@
+.up {
+    min-height: 100svh;
+    background-color: #f7fafa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.up form {
+    box-shadow:var(--box-shadow-1);
+    background-color: var(--color-dark-4);
+    color: var(--color-light-2);
+    width: 95%;
+    max-width: 50rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    border-radius: 1rem;
+    padding: 2rem;
+    position: relative;
+}
+
+.up form > div:nth-of-type(1) {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.up form > div:nth-of-type(1) img {
+    width: 17rem;
+}
+
+.up form.login > div:nth-of-type(2) > input {
+    outline: none;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    background-color: var(--color-dark-6);
+}
+
+.up form.login > div:nth-of-type(2) div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.up form > div:nth-of-type(3){
+    width: 50%;
+    max-width: 60rem;
+}
+
+.up form > div:nth-of-type(3) button {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.7rem;
+    background-color: var(--color-red-1);
+    border-radius: 0.5rem;
+}
+
+.up form.login > div:nth-of-type(2) {
+    width: 100%;
+    max-width: 40rem;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 1.5rem;
+}
+
+
+.error {
+    position: absolute;
+    top: 2rem;
+    margin: auto;
+    width: fit-content;
+    background-color: var(--color-red-1);
+    padding: 2rem;
+    font-size: 1.5rem;
+    color: var(--color-light-1);
+    border-radius: 0.5rem;
+}
+
+

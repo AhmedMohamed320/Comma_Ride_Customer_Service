@@ -1,0 +1,313 @@
+.action,
+.phoneType_1,
+.phoneType_2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.action,
+.phoneType_1 {
+    grid-template-columns: repeat(2, 1fr) !important;
+}
+
+.action>div,
+.phoneType_1>div,
+.phoneType_2>div,
+.phoneType_2>a {
+    padding: 1rem;
+    background-color: var(--color-red-1);
+    color: var(--color-light-2);
+    font-size: 1.5rem;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+.action>div,
+.phoneType_1>div,
+.phoneType_2>div,
+.phoneType_2>a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.phoneType_1,
+.phoneType_2 {
+    grid-template-columns: repeat(3, 1fr);
+    background-color: var(--color-dark-4);
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+.phoneType_1>div,
+.phoneType_2>a,
+.phoneType_2>div {
+    background-color: var(--color-dark-1);
+}
+
+.phoneType_1>div button,
+.phoneType_2>div button,
+.call_statistics button {
+    background-color: var(--color-red-1);
+    font-weight: 500;
+    font-size: 1.4rem;
+    padding: 0.3rem 1rem;
+    border-radius: 0.3rem 1rem;
+    outline: none;
+}
+
+.call_statistics button {
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.phoneType_1 select,
+.phoneType_2 select {
+    background-color: var(--color-dark-4);
+    outline: none;
+    border-radius: 0.5rem;
+    padding: 0 1rem;
+    font-weight: 500;
+}
+
+.groupSelect {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.groupSelect select {
+    width: 100%;
+}
+
+/* --------------------------- */
+
+.call_statistics {
+    font-size: 1.5rem;
+    box-shadow: var(--box-shadow-1);
+    background-color: var(--color-dark-4);
+    color: var(--color-light-2);
+    border-radius: 1rem;
+    overflow: hidden;
+    margin-top: 1rem;
+}
+
+.call_statistics>div:nth-of-type(1) {
+    background-color: var(--color-dark-1);
+    padding: 1rem;
+}
+
+.call_statistics>div:nth-of-type(1) input {
+    background-color: var(--color-dark-4);
+    outline: none;
+    border: none;
+    color: var(--color-light-2);
+    padding: 0.5rem 3rem;
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.table,
+.totalInformation>div:nth-of-type(1) {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 1rem;
+    border: 1px solid var(--color-dark-6);
+}
+
+.table table {
+    width: 100%;
+}
+
+.table tbody {
+    width: 100%;
+    overflow: hidden;
+    background-color: var(--color-dark-4);
+    display: flex;
+    flex-direction: column;
+}
+
+.table tbody tr {
+    display: grid;
+    grid-template-columns: 1fr repeat(3, 2fr) 3fr;
+    text-align: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.table tbody tr:not(:last-of-type) {
+    border-bottom: 1px solid var(--color-light-3);
+}
+
+.totalInformation>div:nth-of-type(1) {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* gap: 1rem; */
+    margin-bottom: 2rem;
+}
+
+.totalInformation>div:nth-of-type(1)>div {
+    padding: 0.5rem;
+    background-color: var(--color-red-1);
+    border-radius: 0.5rem;
+    color: var(--color-light-2);
+    text-align: center;
+}
+
+/* --------------- */
+.part2 {
+    padding: 2rem 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.part2>div:nth-of-type(1),
+.part2>div:nth-of-type(2) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.table {
+    position: relative;
+    border: 1px solid var(--color-dark-6);
+    border-radius: 1rem;
+    padding: 1rem 1rem 0;
+}
+
+.table::after {
+    content: "";
+    position: absolute;
+    background-color: var(--color-dark-4);
+    top: -2.5rem;
+    right: 50%;
+    transform: translate(50%, 50%);
+    padding: 0 1rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.part2>div:nth-of-type(1) .table:nth-of-type(1):after {
+    content: "متابعه العملاء الجدد";
+}
+
+.part2>div:nth-of-type(1) .table:nth-of-type(2):after {
+    content: "مكالمات مجدوله";
+}
+
+.part2>div:nth-of-type(2) .table:nth-of-type(1):after {
+    content: "المكالمات المنجزه";
+}
+
+.part2>div:nth-of-type(1) .table tbody tr {
+    grid-template-columns: 1fr repeat(3, 3fr);
+}
+
+
+/* ---------- */
+
+@media (max-width: 55rem) {
+    .part2>div:nth-of-type(2) {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .phoneType_1>div,
+    .phoneType_2>div {
+        flex-direction: column;
+    }
+}
+
+/* -------------------- */
+.pop {
+    position: fixed;
+    background-color: #2e232380;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10002;
+    display: none;
+}
+
+.pop.show {
+    display: flex;
+}
+
+.pop>div {
+    background-color: var(--color-light-2);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--color-dark-3);
+    font-size: 1.5rem;
+    position: relative;
+    width: 90%;
+    max-width: 35rem;
+}
+
+.pop>div .close {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0.5rem;
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+.pop>div button {
+    width: 100%;
+    background-color: var(--color-red-1);
+    padding: 0.5rem;
+    color: var(--color-light-2);
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shadow-1);
+    font-size: 1.6rem;
+}
+
+.form {
+    border: 1px solid var(--color-light-3);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form>div {
+    display: flex;
+    flex-direction: column;
+}
+
+.form>div>input,
+.form>div>textarea,
+.form>div>select {
+    font-size: 1.5rem;
+    background-color: var(--color-dark-6);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    color: var(--color-light-2);
+    outline: none;
+    border: none;
+    font-size: 1.4rem;
+}
+
+
+/* -------------------- */
+
+
+@media (max-width: 40rem) {
+    .part2>div:nth-of-type(1) {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+}
